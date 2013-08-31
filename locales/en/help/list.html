@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <title>Manage sites</title>
+  </head>
+  <body>
+    <p>That plugin allow you to manage your sites.</p>
+
+    <h3>Usage</h3>
+    <ol>
+      <li>Activate plugin (Parameters tab)</li>
+      <li>Add a type (Types tab)</li>
+      <li>Add a theme (Themes tab)</li>
+    </ol>
+
+    <h3>Parameters</h3>
+    <p>You can: </p>
+    <ul>
+      <li>activate / deactivate the plugin</li>
+      <li>choose media directory</li>
+      <li>choose zoom level for maps</li>
+    </ul>
+
+    <h3>Types</h3>
+    <p>You can: </p>
+    <ul>
+      <li>add types by clicking "New type",</li>
+      <li>update by clicking thier names,</li>
+      <li>or delete them by check checkboxes and click "Remove selected"</li>
+    </ul>
+
+    <h3>Themes</h3>
+    <p>You can add themes and subtheme. A subtheme is like a theme but with an existing theme as parent.</p>
+    <p>A parent theme can have a css class to display it in a particular way.</p>
+
+    <h3>Sites</h3>
+    <p>You can: </p>
+    <ul>
+      <li>Add a site</li>
+      <li>Delete one or severals sites</li>
+      <li>Order sites by drag and drop. You must after that "Save order".</li>
+      <li>Change status for a site (or severals). Only administrator can change status. You can publish, unpublish or delete a site. By default a new site is pending. Deleted sites are not really deleted; they are only "visible" by administrator. That way, administrator can put it back online.</li>
+    </ul>
+
+    <h3>Installation</h3>
+    <p>Installation tab gives you all tags defined by the plugin. You can also find examples of code to display themes list, sites list or a site in particular.</p>
+    <p>The plugin gives you three templates for easier installation: </p>
+    <ol>
+      <li>inc_thematics.html: use it in your _top.html template</li>
+      <li>inc_thematic.html: use it in a page displaying sites for a selected theme</li>
+      <li>inc_site.html: use it for a page displaying a site</li>
+    </ol>
+    <p>To use theses three templates, you need to add the following codes depending on the page you want: </p>
+    <pre>
+      {{tpl:include src="inc_thematics.html"}}
+    </pre>
+    <pre>
+      {{tpl:include src="inc_thematic.html"}}
+    </pre>
+    <pre>
+      {{tpl:include src="inc_site.html"}}
+    </pre>
+  </body>
+</html>
+

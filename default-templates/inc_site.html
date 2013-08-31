@@ -1,0 +1,24 @@
+<div class="site-directory">
+  <a class="right" href="{{tpl:SiteThemeURL}}">{{tpl:lang Back to list}}</a>
+  <h1><a href="{{tpl:SiteThemeURL}}">{{tpl:SiteThemeLabel}} {{tpl:lang in your region}}</a></h1>
+  <tpl:IfSiteImage>
+    <div class="image">
+      <img src="{{tpl:SiteImage}}" alt=""/>
+    </div>
+  </tpl:IfSiteImage>
+  <script type="text/javascript">
+    var site_directory_latitude = {{tpl:SiteLatitude}}, site_directory_longitude = {{tpl:SiteLongitude}}, site_directory_map_zoom = {{tpl:SiteMapZoom}};
+  </script>
+  <div id="site-directory-canvas"></div>
+
+  <div class="infos">
+    <p class="name">{{tpl:SiteName}}</p>
+    <p class="address">{{tpl:SiteAddress}}&nbsp;-&nbsp;{{tpl:SiteTown}}</p>
+    <p class="type">{{tpl:SiteType}}</p>
+    <p class="long_description">{{tpl:SiteLongDescription}}</p>
+    <p class="email"><a href="mailto:{{tpl:SiteEmail}}">{{tpl:SiteEmail}}</a></p>
+    <p class="telephone">{{tpl:SiteTelephone}}</p>
+    <p class="website"><a href="{{tpl:SiteWebsite}}">{{tpl:SiteWebsite}}</a></p>
+  </div>
+</div>
+

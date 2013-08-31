@@ -1,0 +1,64 @@
+site Directory 0.8.6 - 2012-12-21
+=====================================
+* Correction pour rendre les url des sites uniques
+
+site Directory 0.8.5 - 2012-06-03
+=====================================
+* Correction du statut depuis la liste des sites
+
+site Directory 0.8.4 - 2012-06-02
+=====================================
+* Correction du mauvais encodage json
+
+site Directory 0.8.3 - 2012-03-25
+=====================================
+* Correction pour la gestion des préfixes de pages (thematics, thematic et site)
+
+site Directory 0.8.2 - 2012-03-22
+=====================================
+* pas de cache pour les pages thematic et site
+
+site Directory 0.8.1 - 2012-03-19
+=====================================
+* pas d'ajout de http:// si le site web est vide.
+
+site Directory 0.8.0 - 2012-03-11
+=====================================
+* Ajout des marqueurs
+
+site Directory 0.7.1 - 2012-02-28
+=====================================
+* Ajout de "http://" devant les url des sites
+* Ajout d'une feuille de style pour la carte google
+* Quelques corrections (variables non initialisées)
+
+site Directory 0.7.0 - 2012-02-13
+=====================================
+* On peut choisir les préfixes des URLS de la page des thèmes,
+  de la page d'un thème et de la page d'un site.
+* Ajout de la page des thèmes dans les templates fournis.
+
+site Directory 0.6.2 - 2012-02-10
+=====================================
+* Ajout de templates par défaut pour faciliter la mise en place du plugin
+
+site Directory 0.6.1 - 2012-02-06
+=====================================
+* Correction du nom des callbacks
+
+
+site Directory 0.3.1 - 2011-11-07
+=====================================
+* ajout des cartes
+
+site Directory 0.3.0 - 2011-10-24
+=====================================
+* ajout du champ mobile_diffusion
+* possibilité d'enlever l'image d'un site
+* seul le super admin peut changer le statut des sites
+* ajout du champ description longue
+
+site Directory 0.2.0 - 2011-10-20
+=====================================
+* email and telephone are no more mandatory fields.
+* add class selected for selected thematic

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <title>Gestion des sites</title>
+  </head>
+  <body>
+    <p>Ce plugin vous permet de gérer une liste de sites.</p>
+
+    <h3>Mode d'emploi</h3>
+    <ol>
+      <li>Activer le plugin (onglet Paramètres)</li>
+      <li>Ajouter des types (onglet Types)</li>
+      <li>Ajouter des thèmes (onglet Thèmes)</li>
+    </ol>
+
+    <h3>Paramètres</h3>
+    <p>Vous pouvez : </p>
+    <ul>
+      <li>activer / désactiver le plugin</li>
+      <li>choisir le répertoire où seront stockées les images attachées aux sites</li>
+      <li>choisir le zoom pour les cartes</li>
+    </ul>
+
+    <h3>Types</h3>
+    <p>Vous pouvez : </p>
+    <ul>
+      <li>ajouter des types, en cliquant sur "Nouveau type",</li>
+      <li>les modifier, en cliquant sur leur nom,</li>
+      <li>ou les supprimer, en cochant la case associée et en cliquant sur "Supprimer les éléments sélectionnés"</li>
+    </ul>
+
+    <h3>Thèmes</h3>
+    <p>Vous pouvez ajouter des thèmes ou des sous-thème. Un sous-thème est un thème dont le parent est un thème existant.</p>
+    <p>Un thème parent peut avoir une classe <strong>css</strong> particulière, ce qui permet de l'afficher de manière particulière.</p>
+
+    <h3>Sites</h3>
+    <p>Vous pouvez : </p>
+    <ul>
+      <li>Ajouter un site</li>
+      <li>Supprimer un ou des sites</li>
+      <li>ordonner les sites par glisser/déposer. Il faut ensuite "Sauver l'ordre".</li>
+      <li>changer le statut de publication d'un site (ou de plusieurs sites). Seul l'administrateur peut changer le statut. Vous pouvez publier, mettre hors ligne, supprimer, et mettre en attente. Un nouveau site est par défaut en attente. Les sites supprimés ne sont pas réellement supprimés ; ils sont juste uniquement "visibles" par l'administrateur. Cela permet de le remettre en ligne si jamais on change d'avis.</li>
+    </ul>
+
+    <h3>Mise en place</h3>
+    <p>L'onglet Installation donne l'ensemble des tags définis par le plugin et des exemples de code pour afficher la liste des thèmes, la liste des sites d'un thème donné et un site en particulier.</p>
+    <p>Le plugin fournit trois templates pour facilier l'intégration : </p>
+    <ol>
+      <li>inc_thematics.html : à utiliser dans _top.html</li>
+      <li>inc_thematic.html : à utiliser sur la page affichant les sites d'un thème donné</li>
+      <li>inc_site.html : à utiliser sur la page affichant un site</li>
+    </ol>
+    <p>Pour utiliser ces trois templates, il faut les inclure dans une de vos pages avec respectivement les codes suivants : </p>
+    <pre>
+      {{tpl:include src="inc_thematics.html"}}
+    </pre>
+    <pre>
+      {{tpl:include src="inc_thematic.html"}}
+    </pre>
+    <pre>
+      {{tpl:include src="inc_site.html"}}
+    </pre>
+  </body>
+</html>
+

@@ -1,0 +1,23 @@
+<div class="sites-directory">
+  <h1>{{tpl:ThematicPageLabel}} {{tpl:lang in your region}}</h1>
+  <tpl:SitesDirections>
+    <div class="site-directory-direction direction-{{tpl:SiteDirectionClassname}}">
+      <h2>{{tpl:SiteDirection}}</h2>
+      <tpl:SitesSubThemes>
+        <h3>{{tpl:SitesSubThemeLabel}}</h3>
+        <tpl:Sites subtheme="1">
+	  <div class="site-directory-summary">
+	    <p class="name"><a href="{{tpl:SiteURL}}">{{tpl:SiteName}}</a></p>
+	    <div class="description">{{tpl:SiteDescription}}</div>
+	  </div>
+	</tpl:Sites>
+      </tpl:SitesSubThemes>
+      <tpl:Sites subtheme="0">
+	<div class="site-directory-summary">
+	  <p class="name"><a href="{{tpl:SiteURL}}">{{tpl:SiteName}}</a></p>
+	  <div class="description">{{tpl:SiteDescription}}</div>
+	</div>
+      </tpl:Sites>
+    </div>
+  </tpl:SitesDirections>
+</div>

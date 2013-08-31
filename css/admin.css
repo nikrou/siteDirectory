@@ -1,0 +1,60 @@
+.lockable input { 
+  width: 35em;
+  position: relative;
+}
+
+.locker { 
+  position: relative;
+  left: 48em;
+  top: 5px;
+}
+
+p.field textarea, .field .image-file {
+  margin-left: 15em;
+}
+
+#sitedirectory_settings p.field label { 
+  width: 15em;
+}
+
+p.field span.value { 
+  margin-left: 12.5em;
+}
+
+.field .image { 
+  margin: -20px 0 10px 15em;
+}
+
+tr.draggable .first { 
+  padding: 2px 0 4px 30px;
+  cursor: move;
+  background: transparent url(style/drag.png) no-repeat 0 4px;
+}
+
+table.thematics tr td.name, table.thematics tr td.parent { 
+  padding: 5px 20px 5px 5px; 
+}
+
+td.checkbox input { 
+  margin-left: 30px;
+}
+
+.save-order.disabled { 
+  opacity : 0.5;
+  -moz-opacity : 0.5;
+  -ms-filter: 'alpha(opacity=50)'; 
+  filter : alpha(opacity=50);
+}
+
+#content pre {
+  border: 1px solid #888;
+  padding: 5px;
+  margin-left: 2%;
+  background-color: #ccc;
+  width: 90%;
+  overflow: auto;
+}
+
+#sitedirectory_list .checkboxes-helpers a { 
+  margin-left: 10px;
+}

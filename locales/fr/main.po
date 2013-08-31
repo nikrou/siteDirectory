@@ -1,0 +1,375 @@
+# Translation of Site Directory to French
+# Copyright(C) 2011-2012 Nicolas Roudaire <nikrou77@gmail.com>
+# This file is distributed under the same license as the Site Directory plugin.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: siteDirectory 0.1.2\n"
+"POT-Creation-Date: 2011-10-08 14:17+0200\n"
+"PO-Revision-Date: 2011-10-08 14:17+0200\n"
+"Last-Translator: Nicolas Roudaire <nikrou77@gmail.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "New site"
+msgstr "Nouveau site"
+
+msgid "Settings"
+msgstr "Paramètres"
+
+msgid "Plugin activation"
+msgstr "Activation du plugin"
+
+msgid "Enable Site Directory plugin"
+msgstr "Activer le plugin Site Directory"
+
+msgid "Save configuration"
+msgstr "Sauver la configuration"
+
+msgid "Advanced options"
+msgstr "Options avancées"
+
+msgid "Remove selected"
+msgstr "Supprimer les éléments sélectionnés"
+
+msgid "Media sub-directory:"
+msgstr "Sous-répertoire des images : "
+
+msgid "Thematics page prefix:"
+msgstr "Préfixe de la page des thèmes : "
+
+msgid "Thematic page prefix:"
+msgstr "Préfixe de la page d'un thème : "
+
+msgid "Site page prefix:"
+msgstr "Préfixe de la page d'un site : "
+
+msgid "Configuration successfully updated."
+msgstr "Configuration mise à jour avec succès."
+
+msgid "Site directory has been successfully updated."
+msgstr "Le site a été mis à jour avec succès."
+
+msgid "Save order"
+msgstr "Sauver l'ordre"
+
+msgid "Status for theses sites have been successfully updated."
+msgstr "Le statut de ces sites a été mis à jour."
+
+msgid "Thematic(s) successfully deleted."
+msgstr "Les thèmes ont été supprimés avec succès."
+
+msgid "Order for thematics has been successfully updated."
+msgstr "L'ordre des thèmes a été mis à jour."
+
+msgid "Order for sites has been successfully updated."
+msgstr "L'ordre des sites a été mis à jour."
+
+msgid "Selected sites action:"
+msgstr "Action sur les sites séléctionnés"
+
+msgid "No site"
+msgstr "Aucun site"
+
+msgid "About"
+msgstr "A propos"
+
+msgid "If you want more informations on that plugin or have new ideas to develope it, or want to submit a bug or need help (to install or configure it) or for anything else ..."
+msgstr "Si vous voulez des informations sur ce plugin ou si vous avez des idées pour l'améliorer ou si vous pensez avoir trouvé un bug ou si vous avez besoin d'aide (pour l'installer ou le configurer) ou pour tout autre chose..."
+
+msgid "Go to %sthe dedicated page%s in"
+msgstr "Allez sur la %spage dédiée%s du"
+
+msgid "Made by:"
+msgstr "Créé par : "
+
+msgid "Sites directory"
+msgstr "Répertoire de sites"
+
+msgid "Edit site"
+msgstr "Modifier un site"
+
+msgid "Theme:"
+msgstr "Thème : "
+
+msgid "Sub-theme:"
+msgstr "Sous-thème : "
+
+msgid "Name:"
+msgstr "Nom : "
+
+msgid "Warning: If you set the URL manually, it may conflict with another site."
+msgstr "Attention : Si vous indiquez l'URL manuellement, celle-là peut entrer en conflit avec un autre site." 
+
+msgid "Description:"
+msgstr "Description : "
+
+msgid "Long description:"
+msgstr "Description longue : "
+
+msgid "Address:"
+msgstr "Adresse : "
+
+msgid "Telephone:"
+msgstr "Téléphone : "
+
+msgid "Type:"
+msgstr "Type : "
+
+msgid "Image:"
+msgstr "Image : "
+
+msgid "Direction:"
+msgstr "Cardinalité : "
+
+msgid "North"
+msgstr "Nord"
+
+msgid "West"
+msgstr "Ouest"
+
+msgid "South"
+msgstr "Sud"
+
+msgid "East"
+msgstr "Est"
+
+msgid "North area"
+msgstr "secteur Nord"
+
+msgid "West area"
+msgstr "secteur Ouest"
+
+msgid "South area"
+msgstr "secteur Sud"
+
+msgid "East area"
+msgstr "secteur Est"
+
+msgid "Town:"
+msgstr "Ville : "
+
+msgid "Latitude:"
+msgstr "Latitude : "
+
+msgid "Longitude:"
+msgstr "Longitude : "
+
+msgid "Paid?"
+msgstr "Payé ? "
+
+msgid "Mobile diffusion?"
+msgstr "Diffusion sur mobile ? "
+
+msgid "Webiste:"
+msgstr "Site web : "
+
+msgid "Site"
+msgstr "Site"
+
+msgid "Thematics"
+msgstr "Thèmes"
+
+msgid "Sub-theme"
+msgstr "Sous-thème"
+
+msgid "Town"
+msgstr "Ville"
+
+msgid "No thematic"
+msgstr "Aucun thème"
+
+msgid "New thematic"
+msgstr "Nouveau thème"
+
+msgid "Thematic has been successfully updated."
+msgstr "Le thème a été mis à jour avec succès."
+
+msgid "Thematic has been successfully added."
+msgstr "Le thème a été ajouté avec succès."
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Parent"
+msgstr "Parent"
+
+msgid "in your region"
+msgstr "dans votre région"
+
+msgid "Back to list"
+msgstr "Retour à la liste"
+
+msgid "Remove image from that site?"
+msgstr "Supprimer cet image de ce site ? "
+
+msgid "New type"
+msgstr "Nouveau type"
+
+msgid "No type"
+msgstr "Aucun type"
+
+msgid "Type(s) successfully deleted."
+msgstr "Type(s) supprimé(s) avec succès."
+
+msgid "Type has been successfully updated."
+msgstr "Le type a été mis à jour avec succès."
+
+msgid "Type has been successfully added."
+msgstr "Le type a été ajouté avec succès."
+
+# installation tab
+msgid "The plugin define new tags for template:"
+msgstr "Le plugin définit de nouveaux tags pour les templates : "
+
+msgid "Code example to add to your theme <strong>%s</strong> template:"
+msgstr "Exemple de code à insérer dans le template <strong>%s</strong> de votre thème : "
+
+msgid "Loop to display thematics list."
+msgstr "Boucle pour afficher la liste des thèmes"
+
+msgid "Loop to display sites list."
+msgstr "Boucle pour afficher la liste des sites"
+
+msgid "Loop to display sites group by direction."
+msgstr "Boucle pour afficher la liste des sites triés par cardinalité."
+
+msgid "Loop to display sites group by sub-themes."
+msgstr "Boucle pour afficher la liste des sites triés par les sous-thèmes."
+
+msgid "block"
+msgstr "bloc"
+
+msgid "value"
+msgstr "valeur"
+
+msgid "First thematics result container."
+msgstr "Contenu affiché avant la boucle des thèmes "
+
+msgid "Last thematics result container."
+msgstr "Contenu affiché après la boucle des thèmes "
+
+msgid "Link to thematic page"
+msgstr "Lien vers la page d'un thème"
+
+msgid "All tags in site page page can be used in thematic page"
+msgstr "Tous les tags de la page site.html peuvent être utilisés sur la page thematic.html"
+
+msgid "Thematic label"
+msgstr "Nom du thème"
+
+msgid "Sub-theme label"
+msgstr "Nom du sous-thème"
+
+msgid "Direction label"
+msgstr "Cardinalité"
+
+msgid "Thematic page title"
+msgstr "Titre de la page du thème"
+
+msgid "attribute"
+msgstr "attribut"
+
+msgid "To display or not sites with sub-theme"
+msgstr "Pour afficher les sites qui ont ou n'ont pas de sous-thème"
+
+msgid "Link to a site"
+msgstr "Lien vers un site"
+
+msgid "Name of a site"
+msgstr "Nom du site"
+
+msgid "Type of a site"
+msgstr "Type du site"
+
+msgid "Theme label of a site"
+msgstr "Nom du thème du site"
+
+msgid "Sub-theme label of a site"
+msgstr "Nom du sous-thème du site"
+
+msgid "Address of a site"
+msgstr "Adresse du site"
+
+msgid "Town of a site"
+msgstr "Ville du site"
+
+msgid "Description of a site"
+msgstr "Description du site"
+
+msgid "Long description of a site"
+msgstr "Description longue du site"
+
+msgid "Test if image field exists for that site."
+msgstr "Test pour savoir si l'image du site existe ou non"
+
+msgid "Image of a site"
+msgstr "Image du site"
+
+msgid "Email of a site"
+msgstr "Email du site"
+
+msgid "Telephone of a site"
+msgstr "Téléphone du site"
+
+msgid "Website of a site"
+msgstr "Site web du site"
+
+msgid "Direction of a site in lower case for css purpose"
+msgstr "Direction du site en minuscule pour des besoins css"
+
+msgid "Latitude of a site"
+msgstr "Latitude du site"
+
+msgid "Longitude of a site"
+msgstr "Longitude du site"
+
+msgid "Test if site has been paid"
+msgstr "Test pour savoir si le site a été payé"
+
+msgid "Test if site can be diffused on mobile"
+msgstr "Test pour savoir si le site peut-être diffusé sur mobile"
+
+msgid "You can also include the following code in your template to use default layout"
+msgstr "Vous pouvez aussi inclure le code suivant pour utiliser le template fourni par le plugin"
+
+msgid "Find coordinates on googleMap"
+msgstr "Trouver les coordonnées sur GoogleMaps"
+
+msgid "Thematics list"
+msgstr "Liste des thèmes"
+
+msgid "Thematic page"
+msgstr "Page d'un thème"
+
+msgid "Site page"
+msgstr "Page d'un site"
+
+msgid "You must provide a theme"
+msgstr "Le thème est obligatoire"
+
+msgid "You must provide a type"
+msgstr "Le type est obligatoire"
+
+msgid "You must provide a name"
+msgstr "Le nom du site est obligatoire"
+
+msgid "You must provide a description"
+msgstr "La description du site est obligatoire"
+
+msgid "You must provide an address"
+msgstr "L'adresse du site est obligatoire"
+
+msgid "You must provide a direction"
+msgstr "La direction du site est obligatoire"
+
+msgid "You must provide a town"
+msgstr "La ville du site est obligatoire"
+
+msgid "You must provide a latitude"
+msgstr "La latitude du site est obligatoire"
+
+msgid "You must provide a longitude"
+msgstr "La longitude du site est obligatoire"
