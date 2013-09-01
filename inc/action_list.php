@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -47,12 +47,12 @@ try {
   $thematics = array();
   while ($rs_thematic->fetch()) {
     if ($rs_thematic->parent==0) {
-      $thematics[$rs_thematic->id] = array('id' => $rs_thematic->id, 
-					   'label' => $rs_thematic->label, 
-					   'position' => $rs_thematic->position,
-					   'classname' => $rs_thematic->classname,
-					   'children' => array()
-					   );
+      $thematics[$rs_thematic->id] = array('id' => $rs_thematic->id,
+                       'label' => $rs_thematic->label,
+                       'position' => $rs_thematic->position,
+                       'classname' => $rs_thematic->classname,
+                       'children' => array()
+                       );
     } else {
       $thematics[$rs_thematic->parent]['children'][$rs_thematic->id] = array('id' => $rs_thematic->id, 'label' => $rs_thematic->label, 'parent_label' => $rs_thematic->parent_label, 'position' => $rs_thematic->position);
     }
@@ -81,17 +81,17 @@ try {
   $core->error->add($e->getMessage());
 }
 
-if ($core->auth->isSuperAdmin() && !empty($_POST['action']) 
+if ($core->auth->isSuperAdmin() && !empty($_POST['action'])
     && in_array($_POST['action'], array_values($combo_action)) && !empty($_POST['sites'])) {
   try {
     $sdm->updateStatus($_POST['sites'], $_POST['action']);
     $_SESSION['sd_message'] = __('Status for theses sites have been successfully updated.');
-    http::redirect($p_url);  
+    http::redirect($p_url);
   } catch (Exception $e) {
     $core->error->add($e->getMessage());
   }
-} elseif ($core->auth->isSuperAdmin() && !empty($_POST['do_remove']) 
-	  && ($_REQUEST['object']=='thematic') && !empty($_POST['thematics'])) {
+} elseif ($core->auth->isSuperAdmin() && !empty($_POST['do_remove'])
+      && ($_REQUEST['object']=='thematic') && !empty($_POST['thematics'])) {
   try {
     $tm->delete($_POST['thematics']);
     $_SESSION['sd_message'] = __('Thematic(s) successfully deleted.');
@@ -100,8 +100,8 @@ if ($core->auth->isSuperAdmin() && !empty($_POST['action'])
   } catch (Exception $e) {
     $core->error->add($e->getMessage());
   }
-} elseif ($core->auth->isSuperAdmin() && !empty($_POST['do_remove']) 
-	  && ($_REQUEST['object']=='type') && !empty($_POST['types'])) {
+} elseif ($core->auth->isSuperAdmin() && !empty($_POST['do_remove'])
+      && ($_REQUEST['object']=='type') && !empty($_POST['types'])) {
   try {
     $type_manager->delete($_POST['types']);
     $_SESSION['sd_message'] = __('Type(s) successfully deleted.');
@@ -116,7 +116,7 @@ if ($core->auth->isSuperAdmin() && !empty($_POST['action'])
       $tm->updatePositions($_POST['thematic_position']);
       $_SESSION['sd_message'] = __('Order for thematics has been successfully updated.');
       $_SESSION['sd_default_tab'] = 'thematics_list';
-      http::redirect($p_url);    
+      http::redirect($p_url);
     } catch (Exception $e) {
       $core->error->add($e->getMessage());
     }
@@ -124,7 +124,7 @@ if ($core->auth->isSuperAdmin() && !empty($_POST['action'])
     try {
       $sdm->updatePositions($_POST['site_position']);
       $_SESSION['sd_message'] = __('Order for sites has been successfully updated.');
-      http::redirect($p_url);    
+      http::redirect($p_url);
     } catch (Exception $e) {
       $core->error->add($e->getMessage());
     }
@@ -138,8 +138,8 @@ if ($core->auth->isSuperAdmin() && !empty($_POST['saveconfig'])) {
 
     if (!empty($_POST['sitedirectory_map_zoom'])) {
       $sitedirectory_map_zoom = (float) $_POST['sitedirectory_map_zoom'];
-      $core->blog->settings->siteDirectory->put('map_zoom', $sitedirectory_map_zoom, 'float');      
-    }    
+      $core->blog->settings->siteDirectory->put('map_zoom', $sitedirectory_map_zoom, 'float');
+    }
 
     if (!empty($_POST['sitedirectory_media_subdirectory'])) {
       $sitedirectory_media_subdirectory = trim($_POST['sitedirectory_media_subdirectory']);
@@ -171,7 +171,7 @@ if ($core->auth->isSuperAdmin() && !empty($_POST['saveconfig'])) {
     $core->blog->settings->siteDirectory->put('site_prefix', $sitedirectory_site_prefix, 'string');
 
     $message = __('Configuration successfully updated.');
-  } catch(Exception $e) {
+  } catch (Exception $e) {
     $core->error->add($e->getMessage());
   }
 }
@@ -188,4 +188,3 @@ if ($sitedirectory_active) {
 }
 
 include(dirname(__FILE__).'/../tpl/index.tpl');
-?>

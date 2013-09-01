@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -63,7 +63,7 @@ class tplSiteDirectory
     $f = $GLOBALS['core']->tpl->getFilters($attr);
 
     return '<?php echo '.sprintf($f,'$core->blog->url.$core->url->getBase("thematic").'.
-				 '"/".rawurlencode($_ctx->thematics->url)').'; ?>';
+                 '"/".rawurlencode($_ctx->thematics->url)').'; ?>';
   }
 
   public static function ThematicClassname($attr) {
@@ -72,11 +72,11 @@ class tplSiteDirectory
     $res = "<?php\n";
     $res .= 'if ("thematic"==$core->url->type && $_ctx->thematics->url==$_ctx->thematic->url) {';
     $res .=  'echo '.sprintf($f, '"selected ".$_ctx->thematics->classname').';';
-    $res .= '}else{';
+    $res .= '} else {';
     $res .=  'echo '.sprintf($f, '$_ctx->thematics->classname').';';
     $res .= '}';
     $res .= '?>';
-    
+
     return $res;
   }
 
@@ -124,7 +124,7 @@ class tplSiteDirectory
     $res .= 'while ($_ctx->subthemes->fetch()):?>';
     $res .= $content;
     $res .= '<?php endwhile; $_ctx->subthemes = null; ?>';
-    
+
     return $res;
   }
 
@@ -147,9 +147,9 @@ class tplSiteDirectory
 
     if (isset($attr['subtheme'])) {
       if ($attr['subtheme']==0) {
-	$p .= "\$params['sql'] = ' AND s.subtheme IS NULL ';\n";
+    $p .= "\$params['sql'] = ' AND s.subtheme IS NULL ';\n";
       } else {
-	$p .= "\$params['sql'] = ' AND s.subtheme IS NOT NULL ';\n";
+    $p .= "\$params['sql'] = ' AND s.subtheme IS NOT NULL ';\n";
       }
     }
 
@@ -176,8 +176,8 @@ class tplSiteDirectory
   }
 
   public static function IfSiteImage($attr, $content) {
-    return 
-      '<?php if ($_ctx->sites->image_path):?>'. 
+    return
+      '<?php if ($_ctx->sites->image_path):?>'.
       $content.
       '<?php endif; ?>';
   }
@@ -198,7 +198,7 @@ class tplSiteDirectory
     $f = $GLOBALS['core']->tpl->getFilters($attr);
 
     return '<?php echo '.sprintf($f,'$core->blog->url.$core->url->getBase("thematic").'.
-				 '"/".rawurlencode($_ctx->sites->theme_url)').'; ?>';
+                 '"/".rawurlencode($_ctx->sites->theme_url)').'; ?>';
   }
 
   public static function SiteSubThemeLabel($attr) {
@@ -245,13 +245,13 @@ class tplSiteDirectory
 
   public static function SiteEmail($attr) {
     $f = $GLOBALS['core']->tpl->getFilters($attr);
-    
+
     return '<?php echo '.sprintf($f, '$_ctx->sites->email').'; ?>';
   }
 
   public static function SiteTelephone($attr) {
     $f = $GLOBALS['core']->tpl->getFilters($attr);
-    
+
     return '<?php echo '.sprintf($f, '$_ctx->sites->telephone').'; ?>';
   }
 
@@ -278,15 +278,15 @@ class tplSiteDirectory
   }
 
   public static function IfSitePaid($attr, $content) {
-    return 
-      '<?php if ($_ctx->sites->paid):?>'. 
+    return
+      '<?php if ($_ctx->sites->paid):?>'.
       $content.
       '<?php endif; ?>';
   }
 
   public static function IfSiteMobileDiffusion($attr, $content) {
-    return 
-      '<?php if ($_ctx->sites->mobile_diffusion):?>'. 
+    return
+      '<?php if ($_ctx->sites->mobile_diffusion):?>'.
       $content.
       '<?php endif; ?>';
   }
@@ -299,7 +299,8 @@ class tplSiteDirectory
 
   public static function SiteURL($attr) {
     $f = $GLOBALS['core']->tpl->getFilters($attr);
+
     return '<?php echo '.sprintf($f,'$core->blog->url.$core->url->getBase("site").'.
-				 '"/".rawurlencode($_ctx->sites->url)').'; ?>';
+                 '"/".rawurlencode($_ctx->sites->url)').'; ?>';
   }
 }

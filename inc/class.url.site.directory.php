@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -60,4 +60,3 @@ class urlSiteDirectory extends dcUrlHandlers
     self::serveDocument('site.html');
   }
 }
-?>

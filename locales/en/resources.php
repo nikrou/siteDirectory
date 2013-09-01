@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -22,4 +22,3 @@
 $__resources['help']['sitedirectory_list'] = dirname(__FILE__).'/help/list.html';
 $__resources['help']['sitedirectory_site'] = dirname(__FILE__).'/help/site.html';
 $__resources['help']['sitedirectory_sites'] = dirname(__FILE__).'/help/sites.html';
-?>

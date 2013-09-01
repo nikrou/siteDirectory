@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -69,7 +69,7 @@ class siteDirectoryManager
     $rs = $this->con->select($strReq);
     $rs = $rs->toStatic();
 
-    return $rs;        
+    return $rs;
   }
 
   public function getSubthemes(array $params=array()) {
@@ -91,7 +91,7 @@ class siteDirectoryManager
     $rs = $this->con->select($strReq);
     $rs = $rs->toStatic();
 
-    return $rs;        
+    return $rs;
   }
 
   public function getSites(array $params=array()) {
@@ -125,7 +125,7 @@ class siteDirectoryManager
     $rs = $this->con->select($strReq);
     $rs = $rs->toStatic();
 
-    return $rs;    
+    return $rs;
   }
 
   public function getSitesByThematic($thematic) {
@@ -146,7 +146,7 @@ class siteDirectoryManager
     $rs = $this->con->select($strReq);
     $rs = $rs->toStatic();
 
-    return $rs;    
+    return $rs;
   }
 
   public function getThematics($only_parents=false) {
@@ -250,7 +250,7 @@ class siteDirectoryManager
     $strReq = 'SELECT MAX(id) FROM '.$this->table_site;
     $rs = $this->con->select($strReq);
     $cur->id = (integer) $rs->f(0) + 1;
-		
+
     $cur->insert();
     $this->blog->triggerBlog();
   }
@@ -321,7 +321,7 @@ class siteDirectoryManager
     }
     if (!empty($site['type'])) {
       $cur->type = (int) $site['type'];
-    }    
+    }
 
     if (!empty($site['telephone'])) {
       $cur->telephone = (string) $site['telephone'];
@@ -372,7 +372,7 @@ class siteDirectoryManager
 
     $rs = $this->con->select($strReq);
     $rs = $rs->toStatic();
-		
+
     $this->setMedias($rs);
 
     return $rs;
@@ -389,13 +389,13 @@ class siteDirectoryManager
 
     $rs = $this->con->select($strReq);
     $rs = $rs->toStatic();
-		
+
     return $rs;
   }
 
   public function updateStatus($site_ids, $status) {
     if (!isset(self::$Status_action[$status])) {
-      throw new Exception(__('That status doesn\'t exists.'.$status));      
+      throw new Exception(__('That status doesn\'t exists.'.$status));
     }
     $cur = $this->con->openCursor($this->table_site);
 
@@ -404,7 +404,7 @@ class siteDirectoryManager
                  " AND blog_id = '".$this->con->escape($this->blog->id)."' "
                  );
     $this->blog->triggerBlog();
-  }    
+  }
 
   public function removeMedia($site_id) {
     $cur = $this->con->openCursor($this->table_site);
@@ -457,15 +457,15 @@ class siteDirectoryManager
       $strReq .= ' WHERE blog_id = \''.$this->con->escape($this->blog->id).'\'';
       $strReq .= ' AND url = \''.$this->con->escape($url).'\'';
       $strReq .= ' AND id != '.$this->con->escape($id);
-      
-      $rs = $this->con->select($strReq);      
+
+      $rs = $this->con->select($strReq);
       if ($rs->isEmpty()) {
         return $url;
       } else {
         $url = '';
       }
     }
-    
+
     if (empty($url)) {
       $strReq =  'SELECT id, url, name';
       $strReq .= ' FROM '.$this->table_site;
@@ -480,7 +480,7 @@ class siteDirectoryManager
         while ($rs->fetch()) {
           $a[] = $rs->url;
         }
-			
+
         natsort($a);
         $t_url = end($a);
 
@@ -493,7 +493,7 @@ class siteDirectoryManager
         $url = sprintf('%s-%s', text::str2URL((string) $name), $i);
       }
     } else {
-      
+
     }
 
     return $url;
@@ -510,7 +510,7 @@ class siteDirectoryManager
     while ($rs->fetch()) {
       if ($rs->media_id) {
         if (($media_file = $core->media->getFile($rs->media_id)) != null) {
-          $rs->set('image_path', 
+          $rs->set('image_path',
                    $media_file->file_url
                    );
         } else {
@@ -524,4 +524,3 @@ class siteDirectoryManager
     $rs->moveStart();
   }
 }
-?>

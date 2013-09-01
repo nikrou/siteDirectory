@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -40,7 +40,7 @@ class thematicManager
 
     return $rs;
   }
-  
+
   public function add($thematic) {
     $cur = $this->con->openCursor($this->table);
     if (empty($thematic['label'])) {
@@ -66,7 +66,7 @@ class thematicManager
     $strReq = 'SELECT MAX(id) FROM '.$this->table;
     $rs = $this->con->select($strReq);
     $cur->id = (int) $rs->f(0) + 1;
-		
+
     $cur->insert();
     $this->blog->triggerBlog();
   }
@@ -105,8 +105,8 @@ class thematicManager
     foreach ($positions as $thematic_id => $position) {
       $cur->position = $position;
       $cur->update(' WHERE id='.$this->con->escape($thematic_id).
-		 " AND blog_id = '".$this->con->escape($this->blog->id)."' "
-		 );
+         " AND blog_id = '".$this->con->escape($this->blog->id)."' "
+         );
     }
     $this->blog->triggerBlog();
   }
@@ -134,7 +134,7 @@ class thematicManager
 
     $rs = $this->con->select($strReq);
     $rs = $rs->toStatic();
-		
+
     return $rs;
   }
 
@@ -146,7 +146,7 @@ class thematicManager
 
     $rs = $this->con->select($strReq);
     $rs = $rs->toStatic();
-		
-    return $rs;    
+
+    return $rs;
   }
 }

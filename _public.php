@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -24,7 +24,7 @@ if (!defined('DC_RC_PATH')) { return; }
 if (!$core->blog->settings->siteDirectory->active) {
   return;
 } else {
-  $_ctx->sdm = new siteDirectoryManager($core);    
+  $_ctx->sdm = new siteDirectoryManager($core);
 
   $core->addBehavior('publicHeadContent', array('behaviorsSiteDirectory', 'publicHeadContent'));
   $core->addBehavior('publicBeforeDocument', array('behaviorsSiteDirectory', 'addTplPath'));
@@ -35,7 +35,7 @@ if (!$core->blog->settings->siteDirectory->active) {
   $core->tpl->addValue('ThematicLabel', array('tplSiteDirectory', 'ThematicLabel'));
   $core->tpl->addValue('ThematicClassname', array('tplSiteDirectory', 'ThematicClassname'));
   $core->tpl->addValue('ThematicURL', array('tplSiteDirectory', 'ThematicURL'));
-  
+
   $core->tpl->addBlock('Sites', array('tplSiteDirectory', 'Sites'));
   $core->tpl->addBlock('SitesDirections', array('tplSiteDirectory', 'SitesDirections'));
   $core->tpl->addBlock('SitesSubThemes', array('tplSiteDirectory', 'SitesSubThemes'));
@@ -63,6 +63,5 @@ if (!$core->blog->settings->siteDirectory->active) {
   $core->tpl->addValue('SiteLongitude', array('tplSiteDirectory', 'SiteLongitude'));
   $core->tpl->addValue('SiteMapZoom', array('tplSiteDirectory', 'SiteMapZoom'));
   $core->tpl->addBlock('IfSitePaid', array('tplSiteDirectory', 'IfSitePaid'));
-  $core->tpl->addBlock('IfSiteMobileDiffusion', array('tplSiteDirectory', 'IfSiteMobileDiffusion'));  
+  $core->tpl->addBlock('IfSiteMobileDiffusion', array('tplSiteDirectory', 'IfSiteMobileDiffusion'));
 }
-?>

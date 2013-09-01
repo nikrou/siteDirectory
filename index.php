@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -40,6 +40,5 @@ if (!empty($_REQUEST['action']) && in_array($_REQUEST['action'], array('add', 'e
     include(dirname(__FILE__).'/inc/action_form_site.php');
   }
 } else {
-  include(dirname(__FILE__).'/inc/action_list.php');  
+  include(dirname(__FILE__).'/inc/action_list.php');
 }
-?>

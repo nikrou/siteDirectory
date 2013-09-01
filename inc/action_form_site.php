@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -21,8 +21,8 @@
 
 $page_title = __('New site');
 
-$site = array('theme' => '', 'subtheme' => '', 'name' => '', 'url' => '', 'description' => '', 
-              'long_description' => '', 'address' => '', 'telephone' => '', 'email' => '', 
+$site = array('theme' => '', 'subtheme' => '', 'name' => '', 'url' => '', 'description' => '',
+              'long_description' => '', 'address' => '', 'telephone' => '', 'email' => '',
               'type' => '', 'direction' => '', 'town' => '', 'latitude' => '', 'longitude' => '',
               'paid' => '', 'mobile_diffusion' => '', 'website' => ''
               );
@@ -53,10 +53,10 @@ $site_directory_subtheme_js = 'var site_directory_subthemes = [];';
 foreach ($list_subthemes as $ref_id => $subthemes) {
   $site_directory_subtheme_js .= sprintf('site_directory_subthemes[%d] = [', $ref_id);
   foreach ($subthemes as $subtheme) {
-    $site_directory_subtheme_js .= sprintf("{id:%d, label:'%s'},", 
-					   htmlentities($subtheme['id'], ENT_QUOTES, 'utf-8'), 
-					   htmlentities($subtheme['label'], ENT_QUOTES, 'utf-8')
-					   );
+    $site_directory_subtheme_js .= sprintf("{id:%d, label:'%s'},",
+                       htmlentities($subtheme['id'], ENT_QUOTES, 'utf-8'),
+                       htmlentities($subtheme['label'], ENT_QUOTES, 'utf-8')
+                       );
   }
   $site_directory_subtheme_js = substr($site_directory_subtheme_js, 0, -1);
   $site_directory_subtheme_js .= '];';
@@ -98,7 +98,7 @@ if (!empty($_REQUEST['id'])) {
     $site['longitude'] = $rs->longitude;
     $site['paid'] = $rs->paid;
     $site['mobile_diffusion'] = $rs->mobile_diffusion;
-    $site['website'] = $rs->website;    
+    $site['website'] = $rs->website;
     $_SESSION['site_id'] = $_REQUEST['id'];
 
     if (!empty($site['media_id'])) {
@@ -129,11 +129,11 @@ if (!empty($_POST['save_site_directory'])) {
     try {
       files::uploadStatus($_FILES['site_directory_image']);
       $site['media_id'] = $core->media->uploadFile($_FILES['site_directory_image']['tmp_name'],
-						   $_FILES['site_directory_image']['name'],
-						   '',
-						   false,
-						   true
-						   );
+                           $_FILES['site_directory_image']['name'],
+                           '',
+                           false,
+                           true
+                           );
     } catch (Exception $e) {
       $core->error->add($e->getMessage());
     }
@@ -178,9 +178,8 @@ if (!empty($_POST['save_site_directory'])) {
   } catch (Exception $e) {
     $core->error->add($e->getMessage());
   }
-}  
+}
 
 dcPage::helpBlock('site');
 
 include(dirname(__FILE__).'/../tpl/form_site.tpl');
-?>

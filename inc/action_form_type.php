@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -32,7 +32,7 @@ if (($action=='edit') && !empty($_GET['id'])) {
 
 if (!empty($_POST['save_type']) && !empty($_POST['type_label'])) {
   $type['label'] = $_POST['type_label'];
-  
+
   if ($action=='edit') {
     $method = 'update';
     $message = __('Type has been successfully updated.');
@@ -53,4 +53,3 @@ if (!empty($_POST['save_type']) && !empty($_POST['type_label'])) {
 }
 
 include(dirname(__FILE__).'/../tpl/form_type.tpl');
-?>

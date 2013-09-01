@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -22,10 +22,9 @@
 if (!defined('DC_RC_PATH')) { return; }
 
 $this->registerModule(
-	/* Name */		'Site Directory',
-	/* Description*/	'Manage a site directory',
-	/* Author */		'Nicolas Roudaire',
-	/* Version */		'0.8.6',
-	/* Permissions */	'contentadmin'
-);
-?>
+		      /* Name */		'Site Directory',
+		      /* Description*/	'Manage a site directory',
+		      /* Author */		'Nicolas Roudaire',
+		      /* Version */		'0.8.6',
+		      /* Permissions */	'contentadmin'
+		      );

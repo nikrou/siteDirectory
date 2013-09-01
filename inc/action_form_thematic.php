@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -29,11 +29,11 @@ if (!$rs->isEmpty()) {
 
 $page_title = __('New thematic');
 $thematic = array('label' => '',
-		  'description' => '',
-		  'url' => '',
-		  'position' => '',
-		  'classname' => '',
-		  'parent' => '');
+          'description' => '',
+          'url' => '',
+          'position' => '',
+          'classname' => '',
+          'parent' => '');
 
 if (($action=='edit') && !empty($_GET['id'])) {
   $rs_thematic = $tm->getThematic($_GET['id']);
@@ -54,7 +54,7 @@ if (!empty($_POST['save_thematic']) && !empty($_POST['thematic_label'])) {
   $thematic['position'] = isset($_POST['thematic_position'])?$_POST['thematic_position']:null;
   $thematic['classname'] = isset($_POST['thematic_classname'])?$_POST['thematic_classname']:null;
   $thematic['parent'] = isset($_POST['thematic_parent'])?$_POST['thematic_parent']:null;
-  
+
   if ($action=='edit') {
     $method = 'update';
     $message = __('Thematic has been successfully updated.');
@@ -75,4 +75,3 @@ if (!empty($_POST['save_thematic']) && !empty($_POST['thematic_label'])) {
 }
 
 include(dirname(__FILE__).'/../tpl/form_thematic.tpl');
-?>

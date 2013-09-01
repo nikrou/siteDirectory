@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -21,13 +21,12 @@
 
 if (!defined('DC_CONTEXT_ADMIN')) { return; }
 
-$_menu['Blog']->addItem(__('Site Directory'), 
+$_menu['Blog']->addItem(__('Site Directory'),
 			'plugin.php?p=siteDirectory',
 			'index.php?pf=siteDirectory/img/icon.png',
 			preg_match('/plugin.php\?p=siteDirectory(&.*)?$/', $_SERVER['REQUEST_URI']),
 			$core->auth->check('contentadmin', $core->blog->id)
 			);
 
-$core->addBehavior('adminDashboardFavs', array('siteDirectoryAdminPluginBehaviors', 'adminDashboardFavs')); 
+$core->addBehavior('adminDashboardFavs', array('siteDirectoryAdminPluginBehaviors', 'adminDashboardFavs'));
 $core->blog->settings->addNameSpace('siteDirectory');
-?>

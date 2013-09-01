@@ -2,7 +2,7 @@
 // +-----------------------------------------------------------------------+
 // | Site Directory  - a plugin for dotclear                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2011-2012 Nicolas Roudaire        http://www.nikrou.net  |
+// | Copyright(C) 2011-2013 Nicolas Roudaire        http://www.nikrou.net  |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -28,21 +28,20 @@ class behaviorsSiteDirectory
 
     if ($core->url->type=='site') {
       printf('<link type="text/css" rel="stylesheet" href="%s"/>'."\n",
-	     $core->blog->getQmarkURL().'pf=siteDirectory/css/site.directory.css'
-	     );
+         $core->blog->getQmarkURL().'pf=siteDirectory/css/site.directory.css'
+         );
       echo '<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>'."\n";
       printf('<script type="text/javascript" src="%s"></script>'."\n",
-	     $core->blog->getQmarkURL().'pf=siteDirectory/js/jquery.site.directory.map.js'
-	     );
+         $core->blog->getQmarkURL().'pf=siteDirectory/js/jquery.site.directory.map.js'
+         );
     }
-    
+
     printf('<script type="text/javascript" src="%s"></script>'."\n",
-	   $core->blog->getQmarkURL().'pf=siteDirectory/js/jquery.site.directory.js'
-	   );
+       $core->blog->getQmarkURL().'pf=siteDirectory/js/jquery.site.directory.js'
+       );
   }
 
   public static function addTplPath($core) {
     $core->tpl->setPath($core->tpl->getPath(), dirname(__FILE__).'/../default-templates');
   }
 }
-?>
