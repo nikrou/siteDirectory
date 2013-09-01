@@ -21,16 +21,6 @@
 
 if (!defined('DC_RC_PATH')) { return; }
 
-if ($core->blog->settings->siteDirectory->active) {
-  $thematics_prefix = $core->blog->settings->siteDirectory->thematics_prefix;
-  $thematic_prefix = $core->blog->settings->siteDirectory->thematic_prefix;
-  $site_prefix = $core->blog->settings->siteDirectory->site_prefix;
-
-  $core->url->register('thematics', $thematics_prefix, '^'.preg_quote($thematics_prefix).'$', array('urlSiteDirectory', 'thematics'));
-  $core->url->register('thematic', $thematic_prefix, '^'.preg_quote($thematic_prefix).'/(.+)$', array('urlSiteDirectory', 'thematic'));
-  $core->url->register('site', $site_prefix, '^'.preg_quote($site_prefix).'/(.+)$', array('urlSiteDirectory', 'site'));
-}
-
 $__autoload['siteDirectoryAdminPluginBehaviors'] = dirname(__FILE__).'/inc/class.admin.plugin.behaviors.php';
 $__autoload['siteDirectoryManager'] = dirname(__FILE__).'/inc/class.site.directory.manager.php';
 $__autoload['adminSiteDirectoryList'] = dirname(__FILE__).'/inc/class.admin.site.directory.list.php';

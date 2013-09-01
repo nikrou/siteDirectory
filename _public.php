@@ -24,6 +24,14 @@ if (!defined('DC_RC_PATH')) { return; }
 if (!$core->blog->settings->siteDirectory->active) {
   return;
 } else {
+  $thematics_prefix = $core->blog->settings->siteDirectory->thematics_prefix;
+  $thematic_prefix = $core->blog->settings->siteDirectory->thematic_prefix;
+  $site_prefix = $core->blog->settings->siteDirectory->site_prefix;
+
+  $core->url->register('thematics', $thematics_prefix, '^'.preg_quote($thematics_prefix).'$', array('urlSiteDirectory', 'thematics'));
+  $core->url->register('thematic', $thematic_prefix, '^'.preg_quote($thematic_prefix).'/(.+)$', array('urlSiteDirectory', 'thematic'));
+  $core->url->register('site', $site_prefix, '^'.preg_quote($site_prefix).'/(.+)$', array('urlSiteDirectory', 'site'));
+
   $_ctx->sdm = new siteDirectoryManager($core);
 
   $core->addBehavior('publicHeadContent', array('behaviorsSiteDirectory', 'publicHeadContent'));
