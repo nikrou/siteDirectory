@@ -23,8 +23,8 @@ if (!defined('DC_RC_PATH')) { return; }
 
 $this->registerModule(
 		      /* Name */		'Site Directory',
-		      /* Description*/	'Manage a site directory',
+		      /* Description*/	        'Manage a site directory',
 		      /* Author */		'Nicolas Roudaire',
-		      /* Version */		'0.8.6',
-		      /* Permissions */	'contentadmin'
+		      /* Version */		'1.0.0',
+		      /* Permissions */	        'contentadmin'
 		      );

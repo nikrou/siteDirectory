@@ -459,9 +459,7 @@ class siteDirectoryManager
       $strReq .= ' AND id != '.$this->con->escape($id);
 
       $rs = $this->con->select($strReq);
-      if ($rs->isEmpty()) {
-        return $url;
-      } else {
+      if (!$rs->isEmpty()) {
         $url = '';
       }
     }
@@ -491,9 +489,9 @@ class siteDirectoryManager
         }
 
         $url = sprintf('%s-%s', text::str2URL((string) $name), $i);
+      } else {
+        $url = text::str2URL((string) $name);
       }
-    } else {
-
     }
 
     return $url;

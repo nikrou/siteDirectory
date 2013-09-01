@@ -22,7 +22,6 @@ siteDirectory/default-templates/thematics.html
 siteDirectory/default-templates/site.html
 siteDirectory/default-templates/inc_thematics.html
 siteDirectory/default-templates/inc_site.html
-siteDirectory/INFO
 siteDirectory/_install.php
 siteDirectory/COPYING
 siteDirectory/css/admin.css
@@ -31,7 +30,7 @@ siteDirectory/tpl/form_thematic.tpl
 siteDirectory/tpl/form_type.tpl
 siteDirectory/tpl/index.tpl
 siteDirectory/tpl/form_site.tpl
-siteDirectory/README
+siteDirectory/README.md
 siteDirectory/_define.php
 siteDirectory/inc/action_form_site.php
 siteDirectory/inc/class.admin.plugin.behaviors.php
