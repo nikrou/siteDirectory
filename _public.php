@@ -21,7 +21,7 @@
 
 if (!defined('DC_RC_PATH')) { return; }
 
-if (!$core->blog->settings->siteDirectory->active) {
+if (empty($core->blog->settings->siteDirectory) || !$core->blog->settings->siteDirectory->active) {
   return;
 } else {
   $thematics_prefix = $core->blog->settings->siteDirectory->thematics_prefix;

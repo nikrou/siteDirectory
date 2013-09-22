@@ -8,9 +8,11 @@ siteDirectory/BUGS
 siteDirectory/index.php
 siteDirectory/img/icon-b.png
 siteDirectory/img/icon.png
+siteDirectory/locales/en/resources.php
 siteDirectory/locales/en/help/list.html
 siteDirectory/locales/en/help/site.html
 siteDirectory/locales/fr/main.po
+siteDirectory/locales/fr/resources.php
 siteDirectory/locales/fr/help/list.html
 siteDirectory/locales/fr/help/site.html
 siteDirectory/MANIFEST
